@@ -11,27 +11,29 @@
 				"fields": [
 					{
 						"data_type": "Bool",
+						"dimension": 1,
 						"spec": {
 							"defaultValue": false,
 							"info": {
 								"description": {
-									"en": "Clear screen?",
-									"es": "¿Limpiar pantalla?"
+									"en": ["Clear screen?"],
+									"es": ["¿Limpiar pantalla?"]
 								},
 								"hint": {
-									"en": "It is highly recommended to clear the screen for the first command",
-									"es": "Se recomienda limpiar la pantalla en la primera instrucción"
+									"en": ["It is highly recommended to clear the screen for the first command"],
+									"es": ["Se recomienda limpiar la pantalla en la primera instrucción"]
 								}
 							}
 						}
 					}
 					{
-						"data_type": "[Int]",
+						"data_type": "Int",
+						"dimension": 2,
 						"spec": {
 							"info": {
 								"description": {
-									"en": "Cursor",
-									"es": "Cursor"
+									"en": ["Position in horizontal axis"],
+									"es": ["Posición en el eje horizontal"]
 								},
 								"placeholder": {
 									"en": ["x", "y"],
@@ -39,9 +41,6 @@
 								}
 							},
 							"constraints": [
-								{
-									"dimension": 2
-								},
 								{
 									"max_value": [128, 32],
 									"error_message": {
@@ -68,27 +67,28 @@
 					},
 					{
 						"data_type": "Int",
+						"dimension": 1,
 						"spec": {
 							"defaultValue": 1,
 							"info": {
 								"description": {
-									"en": "Text size",
-									"es": "Tamaño del texto"
+									"en": ["Text size"],
+									"es": ["Tamaño del texto"]
 								}
 							},
 							"constraints": [
 								{
 									"max_value": 3,
 									"error_message": {
-										"en": "Value must be less than 3",
-										"es": "El valor debe ser menor que 3"
+										"en": ["Value must be less than 3"],
+										"es": ["El valor debe ser menor que 3"]
 									}
 								},
 								{
 									"min_value": 1,
 									"error_message": {
-										"en": "Value must be greather than 1",
-										"es": "El valor debe ser mayor que 1"
+										"en": ["Value must be greather than 1"],
+										"es": ["El valor debe ser mayor que 1"]
 									}
 								}
 							]
@@ -96,27 +96,28 @@
 					},
 					{
 						"data_type": "String",
+						"dimension": 1,
 						"spec": {
 							"prefix": "~",
 							"info": {
 								"description": {
-									"en": "Text size",
-									"es": "Tamaño del texto"
+									"en": ["Text size"],
+									"es": ["Tamaño del texto"]
 								}
 							},
 							"constraints": [
 								{
 									"max_value": 21,
 									"error_message": {
-										"en": "Value must be less than 21 characters",
-										"es": "El valor debe ser menor que 21 caracteres"
+										"en": ["Value must be less than 21 characters"],
+										"es": ["El valor debe ser menor que 21 caracteres"]
 									}
 								},
 								{
 									"min_value": 1,
 									"error_message": {
-										"en": "Value must be greather than 1 character",
-										"es": "El valor debe ser mayor que 1 carácter"
+										"en": ["Value must be greather than 1 character"],
+										"es": ["El valor debe ser mayor que 1 carácter"]
 									}
 								}
 							]
@@ -133,11 +134,12 @@
 				"fields": [
 					{
 						"data_type": "Bool",
+						"dimension": 1,
 						"spec": {
 							"info": {
 								"description": {
-									"en": "Turn on when:",
-									"es": "Encender cuando:"
+									"en": ["Turn on when:"],
+									"es": ["Encender cuando:"]
 								},
 								"defaultValue": false
 							}
@@ -154,12 +156,13 @@
 				"fields": [
 					{
 						"data_type": "Bool",
+						"dimension": 1,
 						"spec": {
 							"defaultValue": false,
 							"info": {
 								"description": {
-									"en": "Turn on when:",
-									"es": "Encender cuando:"
+									"en": ["Turn on when:"],
+									"es": ["Encender cuando:"]
 								}
 							}
 						}
@@ -175,12 +178,13 @@
 				"fields": [
 					{
 						"data_type": "Bool",
+						"dimension": 1,
 						"spec": {
 							"defaultValue": false,
 							"info": {
 								"description": {
-									"en": "Turn on when:",
-									"es": "Encender cuando:"
+									"en": ["Turn on when:"],
+									"es": ["Encender cuando:"]
 								}
 							}
 						}
@@ -196,12 +200,13 @@
 				"fields": [
 					{
 						"data_type": "Bool",
+						"dimension": 1,
 						"spec": {
 							"defaultValue": false,
 							"info": {
 								"description": {
-									"en": "Turn on when:",
-									"es": "Encender cuando:"
+									"en": ["Turn on when:"],
+									"es": ["Encender cuando:"]
 								}
 							}
 						}
