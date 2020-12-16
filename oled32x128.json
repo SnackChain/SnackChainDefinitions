@@ -1,218 +1,204 @@
 {
-	"description": "OLED 32x128",
-	"inputs": {
-		"devices": [
-			{
-				"device_number": 1,
-				"description": {
-					"en": "Screen with resolution of 32 pixels of height and 128 of width",
-					"es": "Pantalla con resolución de 32 píxeles de alto por 128 de ancho"
-				},
-				"fields": [
-					{
-						"data_type": "Bool",
-						"dimension": 1,
-						"spec": {
-							"defaultValue": false,
-							"info": {
-								"description": {
-									"en": ["Clear screen?"],
-									"es": ["¿Limpiar pantalla?"]
-								},
-								"hint": {
-									"en": ["It is highly recommended to clear the screen for the first command"],
-									"es": ["Se recomienda limpiar la pantalla en la primera instrucción"]
-								}
-							}
-						}
-					}
-					{
-						"data_type": "Int",
-						"dimension": 2,
-						"spec": {
-							"info": {
-								"description": {
-									"en": ["Position in horizontal axis"],
-									"es": ["Posición en el eje horizontal"]
-								},
-								"placeholder": {
-									"en": ["x", "y"],
-									"es": ["x", "y"]
-								}
-							},
-							"constraints": [
-								{
-									"max_value": [128, 32],
-									"error_message": {
-										"en": ["Value must be less than 128", "Value must be less than 32"],
-										"es": ["El valor debe ser menor que 128", "El valor debe ser menor que 32"]
-									}
-								},
-								{
-									"min_value": [0, 0],
-									"error_message": {
-										"en": ["Value must be greather than 0", "Value must be greather than 0"],
-										"es": ["El valor debe ser mayor que 0", "El valor debe ser mayor que 0"]
-									}
-								},
-								{
-									"regex": ["^[0-9]{3}$", "^[0-9]{2}$"],
-									"error_message": {
-										"en": ["Value must be 3 digits", "Value must be 2 digits"],
-										"es": ["El valor debe tener 3 dígitos", "El valor debe tener 2 dígitos"]
-									}
-								}
-							]
-						}
-					},
-					{
-						"data_type": "Int",
-						"dimension": 1,
-						"spec": {
-							"defaultValue": 1,
-							"info": {
-								"description": {
-									"en": ["Text size"],
-									"es": ["Tamaño del texto"]
-								}
-							},
-							"constraints": [
-								{
-									"max_value": 3,
-									"error_message": {
-										"en": ["Value must be less than 3"],
-										"es": ["El valor debe ser menor que 3"]
-									}
-								},
-								{
-									"min_value": 1,
-									"error_message": {
-										"en": ["Value must be greather than 1"],
-										"es": ["El valor debe ser mayor que 1"]
-									}
-								}
-							]
-						}
-					},
-					{
-						"data_type": "String",
-						"dimension": 1,
-						"spec": {
-							"prefix": "~",
-							"info": {
-								"description": {
-									"en": ["Text size"],
-									"es": ["Tamaño del texto"]
-								}
-							},
-							"constraints": [
-								{
-									"max_value": 21,
-									"error_message": {
-										"en": ["Value must be less than 21 characters"],
-										"es": ["El valor debe ser menor que 21 caracteres"]
-									}
-								},
-								{
-									"min_value": 1,
-									"error_message": {
-										"en": ["Value must be greather than 1 character"],
-										"es": ["El valor debe ser mayor que 1 carácter"]
-									}
-								}
-							]
-						}
-					}
-				]
-			},
-			{
-				"device_number": 2,
-				"description": {
-					"en": "Red led",
-					"es": "Led rojo"
-				},
-				"fields": [
-					{
-						"data_type": "Bool",
-						"dimension": 1,
-						"spec": {
-							"info": {
-								"description": {
-									"en": ["Turn on when:"],
-									"es": ["Encender cuando:"]
-								},
-								"defaultValue": false
-							}
-						}
-					}
-				]
-			},
-			{
-				"device_number": 3,
-				"description": {
-					"en": "Green led",
-					"es": "Led verde"
-				},
-				"fields": [
-					{
-						"data_type": "Bool",
-						"dimension": 1,
-						"spec": {
-							"defaultValue": false,
-							"info": {
-								"description": {
-									"en": ["Turn on when:"],
-									"es": ["Encender cuando:"]
-								}
-							}
-						}
-					}
-				]
-			},
-			{
-				"device_number": 4,
-				"description": {
-					"en": "Blue led",
-					"es": "Led azul"
-				},
-				"fields": [
-					{
-						"data_type": "Bool",
-						"dimension": 1,
-						"spec": {
-							"defaultValue": false,
-							"info": {
-								"description": {
-									"en": ["Turn on when:"],
-									"es": ["Encender cuando:"]
-								}
-							}
-						}
-					}
-				]
-			},
-			{
-				"device_number": 5,
-				"description": {
-					"en": "Yellow led",
-					"es": "Led amarillo"
-				},
-				"fields": [
-					{
-						"data_type": "Bool",
-						"dimension": 1,
-						"spec": {
-							"defaultValue": false,
-							"info": {
-								"description": {
-									"en": ["Turn on when:"],
-									"es": ["Encender cuando:"]
-								}
-							}
-						}
-					}
-				]
-			}
-		]
-	}
+    "description": "OLED 32x128",
+    "inputs": {
+        "devices": [{
+                "device_number": 1,
+                "description": {
+                    "en": "Screen with resolution of 32 pixels of height and 128 of width",
+                    "es": "Pantalla con resolución de 32 píxeles de alto por 128 de ancho"
+                },
+                "fields": [{
+                        "data_type": "Bool",
+                        "dimension": 1,
+                        "spec": {
+                            "defaultValue": false,
+                            "info": {
+                                "description": {
+                                    "en": ["Clear screen?"],
+                                    "es": ["¿Limpiar pantalla?"]
+                                },
+                                "hint": {
+                                    "en": ["It is highly recommended to clear the screen for the first command"],
+                                    "es": ["Se recomienda limpiar la pantalla en la primera instrucción"]
+                                }
+                            }
+                        }
+                    }, {
+                        "data_type": "Int",
+                        "dimension": 2,
+                        "spec": {
+                            "info": {
+                                "description": {
+                                    "en": ["Position in horizontal axis"],
+                                    "es": ["Posición en el eje horizontal"]
+                                },
+                                "placeholder": {
+                                    "en": ["x", "y"],
+                                    "es": ["x", "y"]
+                                }
+                            },
+                            "constraints": [{
+                                    "max_value": [128, 32],
+                                    "error_message": {
+                                        "en": ["Value must be less than 128", "Value must be less than 32"],
+                                        "es": ["El valor debe ser menor que 128", "El valor debe ser menor que 32"]
+                                    }
+                                },
+                                {
+                                    "min_value": [0, 0],
+                                    "error_message": {
+                                        "en": ["Value must be greather than 0", "Value must be greather than 0"],
+                                        "es": ["El valor debe ser mayor que 0", "El valor debe ser mayor que 0"]
+                                    }
+                                },
+                                {
+                                    "regex": ["^[0-9]{3}$", "^[0-9]{2}$"],
+                                    "error_message": {
+                                        "en": ["Value must be 3 digits", "Value must be 2 digits"],
+                                        "es": ["El valor debe tener 3 dígitos", "El valor debe tener 2 dígitos"]
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "data_type": "Int",
+                        "dimension": 1,
+                        "spec": {
+                            "defaultValue": 1,
+                            "info": {
+                                "description": {
+                                    "en": ["Text size"],
+                                    "es": ["Tamaño del texto"]
+                                }
+                            },
+                            "constraints": [{
+                                    "max_value": 3,
+                                    "error_message": {
+                                        "en": ["Value must be less than 3"],
+                                        "es": ["El valor debe ser menor que 3"]
+                                    }
+                                },
+                                {
+                                    "min_value": 1,
+                                    "error_message": {
+                                        "en": ["Value must be greather than 1"],
+                                        "es": ["El valor debe ser mayor que 1"]
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "data_type": "String",
+                        "dimension": 1,
+                        "spec": {
+                            "prefix": "~",
+                            "info": {
+                                "description": {
+                                    "en": ["Text size"],
+                                    "es": ["Tamaño del texto"]
+                                }
+                            },
+                            "constraints": [{
+                                    "max_value": 21,
+                                    "error_message": {
+                                        "en": ["Value must be less than 21 characters"],
+                                        "es": ["El valor debe ser menor que 21 caracteres"]
+                                    }
+                                },
+                                {
+                                    "min_value": 1,
+                                    "error_message": {
+                                        "en": ["Value must be greather than 1 character"],
+                                        "es": ["El valor debe ser mayor que 1 carácter"]
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "device_number": 2,
+                "description": {
+                    "en": "Red led",
+                    "es": "Led rojo"
+                },
+                "fields": [{
+                    "data_type": "Bool",
+                    "dimension": 1,
+                    "spec": {
+                        "info": {
+                            "description": {
+                                "en": ["Turn on when:"],
+                                "es": ["Encender cuando:"]
+                            },
+                            "defaultValue": false
+                        }
+                    }
+                }]
+            },
+            {
+                "device_number": 3,
+                "description": {
+                    "en": "Green led",
+                    "es": "Led verde"
+                },
+                "fields": [{
+                    "data_type": "Bool",
+                    "dimension": 1,
+                    "spec": {
+                        "defaultValue": false,
+                        "info": {
+                            "description": {
+                                "en": ["Turn on when:"],
+                                "es": ["Encender cuando:"]
+                            }
+                        }
+                    }
+                }]
+            },
+            {
+                "device_number": 4,
+                "description": {
+                    "en": "Blue led",
+                    "es": "Led azul"
+                },
+                "fields": [{
+                    "data_type": "Bool",
+                    "dimension": 1,
+                    "spec": {
+                        "defaultValue": false,
+                        "info": {
+                            "description": {
+                                "en": ["Turn on when:"],
+                                "es": ["Encender cuando:"]
+                            }
+                        }
+                    }
+                }]
+            },
+            {
+                "device_number": 5,
+                "description": {
+                    "en": "Yellow led",
+                    "es": "Led amarillo"
+                },
+                "fields": [{
+                    "data_type": "Bool",
+                    "dimension": 1,
+                    "spec": {
+                        "defaultValue": false,
+                        "info": {
+                            "description": {
+                                "en": ["Turn on when:"],
+                                "es": ["Encender cuando:"]
+                            }
+                        }
+                    }
+                }]
+            }
+        ]
+    }
 }
